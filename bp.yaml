@@ -1,0 +1,17 @@
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+  - http://www.getcloudify.org/spec/cloudify/4.2.dev1/types.yaml
+
+
+node_types:
+  x:
+    derived_from: cloudify.nodes.Root
+    properties:
+      p1: {}
+
+node_templates:
+  x:
+    type: x
+    properties:
+      p1: {intrinsic11: [123]}
